@@ -1,0 +1,9 @@
+finding_id,exercise,algorithm,mode,key_size,nonce_size,tag_size,result,notes
+SYM-001,AES-GCM Encrypt,AES,GCM,256,12,16,PASS,Encrypt + decrypt roundtrip successful
+SYM-002,AES-GCM Tamper,AES,GCM,256,12,16,PASS,InvalidTag raised on ciphertext modification
+SYM-003,AES-CBC+HMAC Encrypt,AES,CBC+HMAC,256,16,32,PASS,Encrypt-then-MAC verified
+SYM-004,AES-CBC+HMAC Tamper,AES,CBC+HMAC,256,16,32,PASS,HMAC mismatch detected
+SYM-005,ChaCha20-Poly1305 Encrypt,ChaCha20,Poly1305,256,12,16,PASS,Encrypt + decrypt roundtrip successful
+SYM-006,ECB Pattern,AES,ECB,256,N/A,N/A,PASS,Penguin pattern visible in ECB ciphertext
+SYM-007,CBC No Pattern,AES,CBC,256,16,N/A,PASS,No pattern in CBC ciphertext
+SYM-008,Nonce Reuse,AES,GCM,256,12,16,PASS,Plaintext XOR recovered from ciphertext XOR
