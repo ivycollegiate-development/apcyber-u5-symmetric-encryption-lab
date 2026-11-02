@@ -77,7 +77,7 @@ def test_crypto_lab():
             capture_output=True,
             text=True,
             timeout=30,
-            cwd=os.path.dirname(os.path.abspath(__file__))
+            cwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         )
         if result.returncode != 0:
             errors.append(f"crypto_lab.py exited with code {result.returncode}: {result.stderr}")
@@ -102,7 +102,7 @@ def test_ecb_penguin():
             capture_output=True,
             text=True,
             timeout=30,
-            cwd=os.path.dirname(os.path.abspath(__file__))
+            cwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         )
         if result.returncode != 0:
             errors.append(f"ecb_penguin.py exited with code {result.returncode}: {result.stderr}")
@@ -126,7 +126,7 @@ def test_nonce_reuse():
             capture_output=True,
             text=True,
             timeout=30,
-            cwd=os.path.dirname(os.path.abspath(__file__))
+            cwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         )
         if result.returncode != 0:
             errors.append(f"nonce_reuse_demo.py exited with code {result.returncode}: {result.stderr}")
